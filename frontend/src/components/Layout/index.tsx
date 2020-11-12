@@ -35,9 +35,10 @@ export const Title = styled.h1`
 export const Infos = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 `
 
-export const Info = styled.div`
+export const InfoLayout = styled.div`
   display: flex;
   background: var(--info-odd-background);
 
@@ -59,3 +60,19 @@ export const InfoValue = styled.p`
   flex: 1;
   padding: 12px 8px;
 `
+
+interface InfoProps {
+  name: string
+  value?: string | number
+}
+
+export const Info: React.FC<InfoProps> = ({ name, value }) => {
+  if (value === '') return <></>
+
+  return (
+    <InfoLayout>
+      <InfoName>{name}</InfoName>
+      <InfoValue>{value}</InfoValue>
+    </InfoLayout>
+  )
+}

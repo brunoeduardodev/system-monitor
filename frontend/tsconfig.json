@@ -25,8 +25,9 @@
       "@services/*": ["./src/services/*"],
       "@assets/*": ["./src/assets/*"],
       "@contexts/*": ["./src/contexts/*"],
-      "@hooks/*": ["./src/hooks /*"],
-      "@styles/*": ["./src/styles/*"]
+      "@hooks/*": ["./src/hooks/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
     },
   },
 

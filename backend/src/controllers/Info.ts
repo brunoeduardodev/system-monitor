@@ -40,4 +40,10 @@ export default class InfoController {
       network
     })
   }
+
+  getCPUInfo = async (req: Request, res: Response) => {
+    const cpu = await this.cpuController.getCPUInfo();
+
+    res.json(cpu);
+  }
 }
