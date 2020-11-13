@@ -1,19 +1,12 @@
 import { CPU } from '@interfaces/index'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import useRequest from '@hooks/useRequest'
 
-import Layout, {
-  InfoContainer,
-  Title,
-  Infos,
-  Info,
-  InfoName,
-  InfoValue
-} from '@components/Layout'
+import Layout, { InfoContainer, Title, Infos, Info } from '@components/Layout'
 
 const Cpu: React.FC = () => {
-  const { data, error } = useRequest<CPU>('/cpu')
+  const { data } = useRequest<CPU>('/cpu')
 
   console.log(data)
 

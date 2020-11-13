@@ -57,17 +57,19 @@ export const InfoName = styled.p`
 
 export const InfoValue = styled.p`
   color: var(--text);
-  flex: 1;
   padding: 12px 8px;
 `
 
 interface InfoProps {
   name: string
-  value?: string | number
+  value?: string | number | boolean
 }
 
 export const Info: React.FC<InfoProps> = ({ name, value }) => {
-  if (value === '') return <></>
+  if (value === '' || value === 0) return <></>
+
+  if (value === false) value = 'No'
+  if (value === true) value = 'Yes'
 
   return (
     <InfoLayout>

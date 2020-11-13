@@ -37,6 +37,7 @@ export default createGlobalStyle`
     color: var(--text);
     font: 400 16px Roboto, sans-serif;
     width: 100vw;
+    overflow-x: hidden;
   }
 
   a{

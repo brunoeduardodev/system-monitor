@@ -34,9 +34,9 @@ const Topbar: React.FC = () => {
           <a>Graphics</a>
         </Link>
       </Item>
-      <Item active={router.pathname === '/hd'}>
-        <Link href="/hd">
-          <a>HD</a>
+      <Item active={router.pathname === '/disk'}>
+        <Link href="/disk">
+          <a>Disk</a>
         </Link>
       </Item>
       <Item active={router.pathname === '/network'}>

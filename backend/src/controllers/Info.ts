@@ -42,8 +42,32 @@ export default class InfoController {
   }
 
   getCPUInfo = async (req: Request, res: Response) => {
-    const cpu = await this.cpuController.getCPUInfo();
+    const cpu = await this.cpuController.getCPUInfo()
+    res.json(cpu)
+  }
 
-    res.json(cpu);
+  getMemoryInfo = async (req: Request, res: Response) => {
+    const memory = await this.memoryController.getMemoryInfo()
+    res.json(memory)
+  }
+
+  getBatteryInfo = async (req: Request, res: Response) => {
+    const battery = await this.batteryController.getBatteryInfo()
+    res.json(battery)
+  }
+
+  getGraphicsInfo = async (req: Request, res: Response) => {
+    const graphics = await this.graphicsController.getGraphicsInfo()
+    res.json(graphics)
+  }
+
+  getDiskInfo = async (req: Request, res: Response) => {
+    const disk = await this.diskController.getDiskInfo()
+    res.json(disk)
+  }
+
+  getNetworkInfo = async (req: Request, res: Response) => {
+    const network = await this.networkCcontroller.getNetworkInfo()
+    res.json(network)
   }
 }
